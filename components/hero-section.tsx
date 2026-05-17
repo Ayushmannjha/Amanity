@@ -39,9 +39,9 @@ const services = [
 export default function HeroSection() {
   return (
     <section
-      id="home"
-      className="relative overflow-hidden bg-[#000E1F] pt-32 lg:min-h-screen"
-    >
+  id="home"
+  className="relative overflow-hidden bg-[#000E1F] pt-6 lg:pt-8"
+>
       {/* MAIN GRADIENT BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_45%,rgba(0,176,255,0.2),transparent_35%),linear-gradient(to_bottom,#021224,#010814)]" />
 
@@ -54,7 +54,7 @@ export default function HeroSection() {
       {/* BOTTOM GLOW */}
       <div className="absolute bottom-0 left-0 right-0 h-60 bg-[radial-gradient(circle_at_center,rgba(0,160,255,0.32),transparent_70%)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-90px)] max-w-7xl items-center px-6 md:px-10">
+      <div className="relative z-10 mx-auto flex max-w-7xl items-center px-6 py-10 md:px-10 lg:py-14">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[1fr_1fr]">
 
           {/* LEFT CONTENT */}
@@ -71,7 +71,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-[44px] font-black leading-[1.05] tracking-[-1px] text-white md:text-[56px] lg:text-[64px]">
+            <h1 className="text-[44px] font-black leading-[1.05] tracking-[-1px] text-white md:text-[56px] lg:text-[54px]">
               Smart Technology
               <span className="block">
                 <span className="text-orange-500">Stronger</span> Tomorrow
@@ -86,7 +86,7 @@ export default function HeroSection() {
             {/* BUTTONS */}
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#solutions"
+                href="#services"
                 className="group inline-flex h-12 items-center gap-3 rounded-xl bg-orange-500 px-6 text-sm font-bold text-white shadow-[0_12px_30px_rgba(249,115,22,0.28)] transition-all duration-300 hover:scale-105 hover:bg-orange-400"
               >
                 Explore Solutions
@@ -94,7 +94,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#about"
+                href="/#about"
                 className="group inline-flex h-12 items-center gap-4 rounded-xl border border-white/60 px-6 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-cyan-300 hover:bg-white/5"
               >
                 About Us
@@ -112,7 +112,7 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT VISUAL */}
-          <div className="relative mx-auto h-[580px] w-full max-w-[780px]">
+          <div className="relative mx-auto h-[460px] w-full max-w-[720px]">
             
             {/* LOGO GLOW */}
             <div className="absolute left-1/2 top-[52%] h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/25 blur-3xl" />

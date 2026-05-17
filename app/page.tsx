@@ -9,7 +9,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <HeroSection />
       <WhatWeDoSection />
-      <StatsSection />
+      
       <AboutSection />
       <Footer />
     </main>

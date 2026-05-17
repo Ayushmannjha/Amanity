@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 pt-16 pb-8 px-4 md:px-8 border-t border-slate-700">
+    <footer id="contact" className="bg-slate-900 pt-16 pb-8 px-4 md:px-8 border-t border-slate-700">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-12 mb-12">
@@ -27,10 +27,17 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Services', 'Solutions', 'Industries', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors text-sm flex items-center gap-2">
-                    <span>›</span> {link}
+              {[
+                { label: 'Home', href: '/#home' },
+                { label: 'About Us', href: '/#about' },
+                { label: 'Services', href: '/#services' },
+                { label: 'Solutions', href: '/#services' },
+                { label: 'Industries', href: '/#industries' },
+                { label: 'Contact Us', href: '/#contact' },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-400 hover:text-orange-500 transition-colors text-sm flex items-center gap-2">
+                    <span></span> {link.label}
                   </a>
                 </li>
               ))}

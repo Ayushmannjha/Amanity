@@ -3,19 +3,18 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { label: 'HOME', href: '#home' },
-    { label: 'ABOUT US', href: '#about' },
-    { label: 'SERVICES', href: '#services' },
-    { label: 'SOLUTIONS', href: '#solutions' },
-    { label: 'INDUSTRIES', href: '#industries' },
+    // Use absolute fragment links so they work from other pages (e.g. '/#about')
+    { label: 'HOME', href: '/#home' },
+    { label: 'ABOUT US', href: '/#about' },
+    { label: 'SERVICES', href: '/#services' },
     { label: 'TEAM', href: '/team' },
-    { label: 'BLOG', href: '#blog' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: 'CONTACT', href: '/#contact' },
   ]
 
   return (
@@ -23,10 +22,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-<a
-  href="#"
-  className="flex items-center gap-3 hover:opacity-80 transition-opacity"
->
+<Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
   <Image
     src="/amanity-logo-new.png"
     alt="AMANITY Logo"
@@ -45,26 +41,24 @@ export default function Navbar() {
       TECH SOLUTIONS
     </span>
   </div>
-</a>
+</Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex gap-1 text-sm">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* CTA Button + Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
-            <button className="hidden md:block bg-linear-to-r from-orange-500 to-yellow-400 text-black px-6 py-2 rounded-lg font-semibold text-sm shadow-lg shadow-orange-500/20 hover:scale-105 transition-transform">
-              Get In Touch
-            </button>
+            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 hover:bg-white/10 rounded-lg"
@@ -78,14 +72,14 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 space-y-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <button className="w-full bg-linear-to-r from-orange-500 to-yellow-400 text-black px-6 py-2 rounded-lg font-semibold text-sm mt-4 shadow-lg shadow-orange-500/20 hover:scale-105 transition-transform">
               Get In Touch

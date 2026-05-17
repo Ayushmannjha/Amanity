@@ -1,6 +1,5 @@
- 'use client'
+'use client'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Linkedin, Mail, Twitter } from 'lucide-react'
 
 const leaders = [
@@ -50,8 +49,16 @@ export default function LeadershipSection() {
   <div className="bg-slate-50 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leaders.map((leader) => (
-              <div key={leader.name} className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+            {leaders.map((leader, idx) => {
+              // use inline hex colors for the bottom stripe to ensure styles are applied
+              const accentColors = ['#FB923C', '#06B6D4', '#FB7185', '#34D399']
+              const accent = accentColors[idx % accentColors.length]
+              return (
+                <div
+                  key={leader.name}
+                  className="bg-white rounded-xl p-6 shadow-sm border border-slate-100"
+                  style={{ borderBottom: `4px solid ${accent}` }}
+                >
                 <div className="flex flex-col items-center text-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center">
                     {/* icon placeholder: simple circle with peach stroke */}
@@ -66,14 +73,11 @@ export default function LeadershipSection() {
                   <div className="w-10 h-[2px] bg-orange-100 mt-3 mb-3" />
                   <p className="text-sm text-slate-600">{leader.bio}</p>
 
-                  <div className="flex items-center gap-3 mt-4 text-slate-500">
-                    <a href="#" className="hover:text-orange-400"><Linkedin size={16} /></a>
-                    <a href="#" className="hover:text-orange-400"><Twitter size={16} /></a>
-                    <a href={`mailto:info@securetechsolutions.in`} className="hover:text-orange-400"><Mail size={16} /></a>
-                  </div>
+                  
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
 
           {/* CTA stripe */}
