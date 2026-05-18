@@ -9,15 +9,29 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
           <div>
-            <div className="mb-4">
-              <Image
-                src="/amanity-logo-new.png"
-                alt="AMANITY Logo"
-                width={140}
-                height={70}
-                className="h-16 w-auto mb-3"
-              />
-            </div>
+            <div className="mb-4 flex flex-col items-start">
+  
+  <Image
+    src="/amanity-logo-new.png"
+    alt="AMANITY Logo"
+    width={140}
+    height={70}
+    className="h-16 w-auto mb-2"
+  />
+
+  <div>
+    
+    <h2 className="text-xl md:text-2xl font-bold text-white leading-tight">
+      AMANITY
+    </h2>
+
+    <p className="text-xs md:text-sm tracking-[0.3em] text-orange-500 font-medium">
+      TECH SOLUTIONS
+    </p>
+
+  </div>
+
+</div>
             <p className="text-gray-400 text-sm leading-relaxed">
               We provide smart technology solutions for healthcare, education, businesses and secure digital transformation.
             </p>

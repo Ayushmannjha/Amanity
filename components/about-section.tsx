@@ -62,15 +62,35 @@ export default function AboutSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(14,165,233,0.12),transparent_30%)]" />
             <div className="relative z-10 flex h-full items-center justify-center">
-              <div className="w-50 h-64 md:w-72 md:h-62 rounded-full bg-gradient-to-br from-cyan-400/30 to-transparent flex items-center justify-center">
-                <Image
-                  src="/amanity-logo-new.png"
-                  alt="Amanity Logo"
-                  width={280}
-                  height={250}
-                  className="w-40 h-40 md:w-56 md:h-46 drop-shadow-2xl"
-                />
-              </div>
+              <div className="flex flex-col items-center justify-center">
+  
+  <div className="w-50 h-64 md:w-72 md:h-62 rounded-full bg-gradient-to-br from-cyan-400/30 to-transparent flex items-center justify-center">
+    
+    <Image
+      src="/amanity-logo-new.png"
+      alt="Amanity Logo"
+      width={280}
+      height={250}
+      className="w-40 h-40 md:w-56 md:h-46 drop-shadow-2xl"
+    />
+
+  </div>
+
+  {/* Company Name */}
+
+  <div className="mt-4 text-center">
+    
+    <h2 className="text-2xl md:text-4xl font-extrabold tracking-wide text-white">
+      AMANITY
+    </h2>
+
+    <p className="text-sm md:text-lg text-orange-500 font-medium tracking-[0.25em]">
+      TECH SOLUTIONS
+    </p>
+
+  </div>
+
+</div>
             </div>
           </div>
         </div>
