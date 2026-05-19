@@ -78,24 +78,24 @@ export default function Footer() {
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-orange-500 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-400">123, Tech Park, Indore, Madhya Pradesh, India</p>
+                <p className="text-gray-400">Website Par Adress - Amanity Tech Solutions Rajmani Complex, Near Ram Mandir Chauraha, Lashkar, Gwalior-474001</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-orange-500 flex-shrink-0" />
-                <a href="tel:+919999988888" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  +91 9999 88888
+                <a href="tel:+919890308440" className="text-gray-400 hover:text-orange-500 transition-colors">
+                  +91 9890308440
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-orange-500 flex-shrink-0" />
-                <a href="mailto:info@amanitytech.com" className="text-gray-400 hover:text-orange-500 transition-colors truncate">
-                  info@amanitytech.com
+                <a href="mailto:amanitytechsolution@amanitytechsolutions.com" className="text-gray-400 hover:text-orange-500 transition-colors truncate">
+                  amanitytechsolution@amanitytechsolutions.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Globe size={18} className="text-orange-500 flex-shrink-0" />
-                <a href="https://www.amanitytech.com" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  www.amanitytech.com
+                <a href="https://www.amanitytechsolutions.com/" className="text-gray-400 hover:text-orange-500 transition-colors">
+                  www.amanitytechsolutions.com
                 </a>
               </div>
             </div>
