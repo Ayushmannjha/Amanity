@@ -3,6 +3,12 @@ import { SERVICES } from '@/lib/services'
 import { Heart, BookOpen, Code, Shield } from 'lucide-react'
 
 export default function WhatWeDoSection() {
+  const badgeVariants = [
+    { bg: 'linear-gradient(135deg,#ff7a18 0%,#ff4e50 100%)', accent: '#ff4e50' },
+    { bg: 'linear-gradient(135deg,#06b6d4 0%,#0676a8 100%)', accent: '#06b6d4' },
+    { bg: 'linear-gradient(135deg,#7c3aed 0%,#ec4899 100%)', accent: '#ec4899' },
+    { bg: 'linear-gradient(135deg,#34d399 0%,#10b981 100%)', accent: '#10b981' },
+  ]
   return (
     <section id="services" className="py-20 px-4 md:px-8 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -26,15 +32,23 @@ export default function WhatWeDoSection() {
           {SERVICES.map((service, idx) => {
             // fallback icon mapping for visual variety
             const Icon = [Heart, BookOpen, Code, Shield][idx % 4]
+            const variant = badgeVariants[idx % badgeVariants.length]
             return (
               <article
                 key={service.slug}
-                className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-lg transition-transform duration-300 hover:-translate-y-2"
+                className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-lg transition-transform duration-300 hover:-translate-y-2"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-br from-orange-500 to-orange-400 text-white shadow-md">
-                    <Icon size={24} />
+                  {/* outer gradient ring + inner white circle for a professional badge */}
+                  <div
+                    className="rounded-2xl p-1"
+                    style={{ background: variant.bg }}
+                  >
+                    <div className="bg-white rounded-xl h-12 w-12 flex items-center justify-center shadow-sm transform transition-transform duration-200 group-hover:scale-105">
+                      <Icon size={20} color={variant.accent} />
+                    </div>
                   </div>
+
                   <h3 className="text-lg font-bold text-gray-900">{service.title}</h3>
                 </div>
 
