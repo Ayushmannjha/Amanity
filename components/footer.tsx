@@ -78,7 +78,7 @@ export default function Footer() {
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-orange-500 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-400">Website Par Adress - Amanity Tech Solutions Rajmani Complex, Near Ram Mandir Chauraha, Lashkar, Gwalior-474001</p>
+                <p className="text-gray-400">Amanity Tech Solutions Rajmani Complex, Near Ram Mandir Chauraha, Lashkar, Gwalior-474001</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-orange-500 flex-shrink-0" />
